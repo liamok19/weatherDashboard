@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
 </head>
 <body>
-    
+    <h1 class="page_header">Weather Dashboard</h1>
+    <div class="search_fields">
+        <h2><strong class="search_title">Search for city:</strong></h2>
+        <input type="City Search" class="text_container">
+        <Button>Search</Button>
+        <div class="blackline_style"></div>
+    </div>
+    <div id="currentWeather" class="currentforecast_container">Title
+        <p data-condition="title_date"></p>
+        <p data-condition="temperature"></p>
+        <p data-condition="wind"></p>
+        <p data-condition="humidity"></p>
+        <p data-condition="UV_index"></p>
+    </div>
+    <div id="futureWeather">5-Day Forecast
+        <div class="furtureforecast_container">
+            <div>
+                <p data-future="Date">test_date</p>
+                <p data-future="icon">test_icon</p>
+                <p data-future="temperature">test_temp</p>
+                <p data-future="wind">test_wind</p>
+                <p data-future="humidity">test_humid</p>
+            </div>
+            <div>
+                <p data-future="Date">test_date</p>
+                <p data-future="icon">test_icon</p>
+                <p data-future="temperature">test_temp</p>
+                <p data-future="wind">test_wind</p>
+                <p data-future="humidity">test_humid</p>
+            </div>
+            <div>
+                <p data-future="Date">test_date</p>
+                <p data-future="icon">test_icon</p>
+                <p data-future="temperature">test_temp</p>
+                <p data-future="wind">test_wind</p>
+                <p data-future="humidity">test_humid</p>
+            </div>
+            <div>
+                <p data-future="Date">test_date</p>
+                <p data-future="icon">test_icon</p>
+                <p data-future="temperature">test_temp</p>
+                <p data-future="wind">test_wind</p>
+                <p data-future="humidity">test_humid</p>
+            </div>
+            <div>
+                <p data-future="Date">test_date</p>
+                <p data-future="icon">test_icon</p>
+                <p data-future="temperature">test_temp</p>
+                <p data-future="wind">test_wind</p>
+                <p data-future="humidity">test_humid</p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
