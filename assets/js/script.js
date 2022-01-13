@@ -41,11 +41,11 @@ button.addEventListener('click', function(event){
         var humidityValue = data  ['main']['humidity'];
 
         cityNameEl.innerHTML=nameValue;
-        descEl.innerHTML=descValue;
-        tempEl.innerHTML=tempValue;
+        descEl.innerHTML= "Weather Description: " + descValue;
+        tempEl.innerHTML="Temp: " + tempValue;
         // uvIndex.innerHTML=uvIndexValue;
-        windEl.innerHTML=windValue;
-        humidityEl.innerHTML=humidityValue;
+        windEl.innerHTML= "Wind: " + windValue;
+        humidityEl.innerHTML= "Humidity: " + humidityValue;
         })
         
     fetch('http://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+'&appid=00b640b6c43ad18944cc842b8bce44fb')
@@ -53,33 +53,33 @@ button.addEventListener('click', function(event){
         // .then(data => console.log (data))
         .then(data => {
             //data attribute for furture forecast 
-            var day1futurenameValue = data ['city']['name'];
-            var day1futuredescValue = data ['list'][0]['weather'][0]['description'];
+            // var day1futurenameValue = data ['city']['name'];
+            // var day1futuredescValue = data ['list'][0]['weather'][0]['description'];
             var day1futuretempValue = data ['list'][0]['main']['temp'];
             var day1futurewindValue = data ['list'][0]['wind']['speed'];
             var day1futurehumidityValue = data ['list'][0]['main']['humidity'];
-            var day1futureuvIndexValue = data ['city']['coord']['lat','lon'];
+            // var day1futureuvIndexValue = data ['city']['coord']['lat','lon'];
 
-            day1futureNameEl.innerHTML=day1futurenameValue;
-            day1futuredescEl.innerHTML=day1futuredescValue;
-            day1futuretempEl.innerHTML=day1futuretempValue;
-            day1futurewindEl.innerHTML=day1futurewindValue;
-            day1futurehumidityEl.innerHTML=day1futurehumidityValue;
-            day1futureuvIndex.innerHTML=day1futureuvIndexValue;
+            // day1futureNameEl.innerHTML=day1futurenameValue;
+            // day1futuredescEl.innerHTML=day1futuredescValue;
+            day1futuretempEl.innerHTML="Temp: " + day1futuretempValue;
+            day1futurewindEl.innerHTML="Wind: " + day1futurewindValue;
+            day1futurehumidityEl.innerHTML="Humidity: " +day1futurehumidityValue;
+            // day1futureuvIndex.innerHTML=day1futureuvIndexValue;
 
-            var day2futurenameValue = data ['city']['name'];
-            var day2futuredescValue = data ['list'][1]['weather'][0]['description'];
+            // var day2futurenameValue = data ['city']['name'];
+            // var day2futuredescValue = data ['list'][1]['weather'][0]['description'];
             var day2futuretempValue = data ['list'][1]['main']['temp'];
             var day2futurewindValue = data ['list'][1]['wind']['speed'];
             var day2futurehumidityValue = data ['list'][1]['main']['humidity'];
-            var day2futureuvIndexValue = data ['city']['coord']['lat','lon'];
+            // var day2futureuvIndexValue = data ['city']['coord']['lat','lon'];
 
-            day2futureNameEl.innerHTML=day2futurenameValue;
-            day2futuredescEl.innerHTML=day2futuredescValue;
-            day2futuretempEl.innerHTML=day2futuretempValue;
-            day2futurewindEl.innerHTML=day2futurewindValue;
-            day2futurehumidityEl.innerHTML=day2futurehumidityValue;
-            day2futureuvIndex.innerHTML=day2futureuvIndexValue;
+            // day2futureNameEl.innerHTML=day2futurenameValue;
+            // day2futuredescEl.innerHTML=day2futuredescValue;
+            day2futuretempEl.innerHTML="Temp: " +day2futuretempValue;
+            day2futurewindEl.innerHTML="Wind: " + day2futurewindValue;
+            day2futurehumidityEl.innerHTML="Humidity: " + day2futurehumidityValue;
+            // day2futureuvIndex.innerHTML=day2futureuvIndexValue;
 
 
         })
