@@ -37,7 +37,7 @@ THEN I am again presented with current and future conditions for that city
 
 | Task       | Progress      | 
 | ------------- |:-------------:| 
-| Build HTML containers based on mockup provided by lead. | Not Yet Started | 
+| Build HTML containers based on mockup provided by lead. | Completed | 
 | Search field container to allow user to search a City. | Not Yet Started | 
 | Present that above searched city with current weather conditions 1 container and 5 furture panels with weather conditions in another container. | Not Yet Started | 
 | The city searched must be saved to local storage able listed once you refresh. Also click sensitive so a user can call on that city's weather fields again | Not Yet Started | 
@@ -70,4 +70,7 @@ Based on the research I found the following sources that I would like to credit 
 
 
 ## Notes
-11/01/2022 - 
+11/01/2022 - Build HTML, CSS and JS files. Use the search field completed in the dayplanner as a base for the city field.  I have created the API key ID for the openweather app. Initially it came up with a 404 that's no longer the case but I have a 401. The doc mentioned it's because the ID need a couple of hours for it process. Once I have that I can look back into the fetchAPI URL.
+Notes for pickup: Display previous searches from the API search. https://openweathermap.org/faq#error401 
+
+12/01/2022 - Reviewed process in JS and research more on what was the purpose of the fetch. Also the API key is now working. Rolling this out.
