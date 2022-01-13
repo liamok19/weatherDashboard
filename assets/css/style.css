@@ -30,13 +30,58 @@
 
 
 }
-
-.furtureforecast_container {
-    background: #2a2a50;
+.futureweather_container {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.day1_furtureforecast {
+    background: #2a2a50;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
     border: 10px;
 }
+
+.day2_furtureforecast{
+    background: #2a2a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: aliceblue;
+    margin: 20px;
+    border: 10px;
+}
+.day3_furtureforecast {
+    background: #2a2a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: aliceblue;
+    margin: 20px;
+    border: 10px;
+}
+
+.day4_furtureforecast{
+    background: #2a2a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: aliceblue;
+    margin: 20px;
+    border: 10px;
+}
+.day5_furtureforecast {
+    background: #2a2a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: aliceblue;
+    margin: 20px;
+    border: 10px;
+}
+
