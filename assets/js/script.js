@@ -45,7 +45,7 @@ button.addEventListener('click', function(event){
         // .then(data => console.log (data))
         .then(data => {
             var futurenameValue = data ['city']['name'];
-            var futuredescValue = data ['list'][0]['weather']['description'];
+            var futuredescValue = data ['list'][0]['weather'][0]['description'];
             var futuretempValue = data ['list'][0]['main']['temp'];
             var futurewindValue = data ['list'][0]['wind']['speed'];
             var futurehumidityValue = data ['list'][0]['main']['humidity'];
