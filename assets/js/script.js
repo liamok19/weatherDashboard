@@ -40,14 +40,15 @@ button.addEventListener('click', function(event){
         humidityEl.innerHTML=humidityValue;
         })
         
-    fetch('http://pro.openweathermap.org/data/2.5/forecast/hourly?q='+inputValue.value+'&appid=00b640b6c43ad18944cc842b8bce44fb')
+    fetch('http://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+'&appid=00b640b6c43ad18944cc842b8bce44fb')
         .then(response => response.json())
+        // .then(data => console.log (data))
         .then(data => {
-            var futurenameValue = data ['name'];
-            var futuredescValue = data ['weather'][0]['description'];
-            var futuretempValue = data ['main']['temp'];
-            var futurewindValue = data ['wind']['speed'];
-            var futurehumidityValue = data  ['main']['humidity'];
+            var futurenameValue = data ['city']['name'];
+            var futuredescValue = data ['list'][0]['weather']['description'];
+            var futuretempValue = data ['list'][0]['main']['temp'];
+            var futurewindValue = data ['list'][0]['wind']['speed'];
+            var futurehumidityValue = data ['list'][0]['main']['humidity'];
             // var futureuvIndexValue = data ['id'];
 
 
