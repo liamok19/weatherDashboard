@@ -42,23 +42,34 @@ button.addEventListener('click', function(event){
     event.preventDefault()
 
     fetch('http://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+ APIKey)
+
     .then(response => response.json())
     // .then(data => console.log (data))
     .then(data => {
         var nameValue = data ['name'];
         var descValue = data ['weather'][0]['description'];
         var tempValue = data ['main']['temp'];
-        // var uvIndexValue = data ['id'];
         var windValue = data ['wind']['speed'];
         var humidityValue = data  ['main']['humidity'];
 
         cityNameEl.innerHTML=nameValue ;
         descEl.innerHTML= "Weather Description: " + descValue;
         tempEl.innerHTML="Temp: " + tempValue  + "F";
-        // uvIndex.innerHTML=uvIndexValue;
         windEl.innerHTML= "Wind: " + windValue + "MPH";
         humidityEl.innerHTML= "Humidity: " + humidityValue + "%";
-        })
+        var latitude = data ['coord']['lat'];
+        var longitude= data ['coord']['lon'];
+
+    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + inputValue.value, '&lon=' + inputValue.value + APIKey)
+    .then(response => response.json())
+    .then(data => console.log (data))
+    // .then(data => {
+    //     var uvIndexValue = data ['id'];
+    //     uvIndex.innerHTML=uvIndexValue;
+
+    })
+
+
         
     fetch('http://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+ APIKey)
         .then(response => response.json())
