@@ -38,12 +38,12 @@ THEN I am again presented with current and future conditions for that city
 | Task       | Progress      | 
 | ------------- |:-------------:| 
 | Build HTML containers based on mockup provided by lead. | Completed | 
-| Search field container to allow user to search a City. | Not Yet Started | 
-| Present that above searched city with current weather conditions 1 container and 5 furture panels with weather conditions in another container. | Not Yet Started | 
-| The city searched must be saved to local storage able listed once you refresh. Also click sensitive so a user can call on that city's weather fields again | Not Yet Started | 
-| The fields for the city search must contain: city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index | Not Yet Started | 
-| UV index colour changes colour based on favorable, moderate, or severe | Not Yet Started | 
-| Apply additional CSS. Not required but would like to have | Not Yet Started | 
+| Search field container to allow user to search a City. | Completed | 
+| Present that above searched city with current weather conditions 1 container and 5 furture panels with weather conditions in another container. | Completed | 
+| The city searched must be saved to local storage able listed once you refresh. Also click sensitive so a user can call on that city's weather fields again | In Progress | 
+| The fields for the city search must contain: city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index | In Progress | 
+| UV index colour changes colour based on favorable, moderate, or severe | Research  | 
+| Apply additional CSS. Not required but would like to have | InP  | 
 
 
 ## Assets
@@ -74,3 +74,10 @@ Based on the research I found the following sources that I would like to credit 
 Notes for pickup: Display previous searches from the API search. https://openweathermap.org/faq#error401 
 
 12/01/2022 - Reviewed process in JS and research more on what was the purpose of the fetch. Also the API key is now working. Rolling this out.
+
+14/01/2021 
+current and furture forecast is shwoging everything other then the date and the icon. Need to research how to convert the interger field I can grab from the API and convert into a JSON string. The icons for each weathr is my next focus. Oustanding task are:
+- Icons on the furture weather forcast 
+- UVI index for current weather only 
+- Date for each day 
+- local storgae for previous searches and then calling those previous searched cities to display weather information again. 

@@ -21,20 +21,31 @@
     margin: 2vh;
 }
 
+.searchBtn {
+    background-color: #69a7f7;
+    border-color: #ffffff;
+    font-style: normal;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 7px 31px;
+}
+
 .currentforecast_container{
-    background: #d7aff1;
+    background: #ffffff;
     border-style: solid;
     border-width: 2px;
     text-align: center;
     margin: 10px;
-
-
+    padding: 10px;
+    line-height: 30px;
 }
+
 .futureweather_container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    width: 20px;
 }
 
 .day1_furtureforecast {
