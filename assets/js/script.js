@@ -1,6 +1,8 @@
 //when user types in search field local storage saves it for listing purposes but all display weather snippets. 
 var button = document.querySelector('.searchBtn');
 var inputValue = document.querySelector('.inputValue');
+var languageButtonsEl = document.getElementById('#language-buttons');
+
 
 //APIKey to call on for later 
 var APIKey="&appid=00b640b6c43ad18944cc842b8bce44fb";
@@ -12,6 +14,7 @@ var tempEl= document.querySelector('.temp');
 var uvIndex = document.querySelector('.uvIndex');
 var windEl = document.querySelector('.wind');
 var humidityEl = document.querySelector('.humidity');
+var dateEL = document.querySelector('.date');
 
 //future container variables
 //Day 1 
@@ -38,6 +41,8 @@ var day5futurehumidityEl = document.querySelector(".futurehumidity5");
 
 
 //when the searchbutton is click the current weather will be listed and the future forecast
+var displayCity = button
+
 button.addEventListener('click', function(event){ 
     event.preventDefault()
 
@@ -51,30 +56,45 @@ button.addEventListener('click', function(event){
         var tempValue = data ['main']['temp'];
         var windValue = data ['wind']['speed'];
         var humidityValue = data  ['main']['humidity'];
+        // latitude = data ['coord']['lat'];
+        // longitude = data ['coord']['lon'];
 
+        dateEL.innerHTML = moment().format("MMM Do YY");  
         cityNameEl.innerHTML=nameValue ;
         descEl.innerHTML= "Weather Description: " + descValue;
         tempEl.innerHTML="Temp: " + tempValue  + "F";
         windEl.innerHTML= "Wind: " + windValue + "MPH";
         humidityEl.innerHTML= "Humidity: " + humidityValue + "%";
-        var latitude = data ['coord']['lat'];
-        var longitude= data ['coord']['lon'];
 
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + inputValue.value, '&lon=' + inputValue.value + APIKey)
-    .then(response => response.json())
-    .then(data => console.log (data))
-    // .then(data => {
-    //     var uvIndexValue = data ['id'];
-    //     uvIndex.innerHTML=uvIndexValue;
 
-    })
+    // var api = fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + ',&lon=' + longitude + APIKey)
 
+//     .then(response => response.json())
+//     .then(data => console.log (data))
+//     .then(data => {
+//         var uvIndexValue = data ['id'];
+//         uvIndex.innerHTML=uvIndexValue;
+//     })
+})
+
+var datELtomorrow = document.querySelector('.dateDay1');
+var datELday3 = document.querySelector('.dateDay2');
+var datELday4 = document.querySelector('.dateDay3');
+var datELday5 = document.querySelector('.dateDay4');
+var datELday6 = document.querySelector('.dateDay5');
 
         
     fetch('http://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+ APIKey)
         .then(response => response.json())
         // .then(data => console.log (data))
         .then(data => {
+
+            datELtomorrow.innerHTML = moment().add(1, 'days').calendar();  
+            datELday3.innerHTML = moment().add(2, 'days').calendar();  
+            datELday4.innerHTML = moment().add(3, 'days').calendar();  
+            datELday5.innerHTML = moment().add(4, 'days').calendar();  
+            datELday6.innerHTML = moment().add(5, 'days').calendar();  
+
             //data attribute for furture forecast 
             // var day1futureDate = data ['list'][1]['dt_txt'];
             var day1futuretempValue = data ['list'][1]['main']['temp'];
@@ -143,3 +163,19 @@ button.addEventListener('click', function(event){
 
     .catch(err => alert("City Name undefined"))
 })
+
+var text = document.querySelector(".pageRefreshText");
+var storedInput = localStorage.getItem('textInput');
+
+if (inputValue){
+    text.textContent = 'Previous City: ' + storedInput 
+}
+inputValue.addEventListener('input', letter =>{
+    text.textContent = letter.target.value
+})
+// Day 1 is the text input field because we want set multiple text input fields. 
+var saveToLocalStorage = () => {
+    localStorage.setItem('textInputDay1', text.textContent)
+}
+
+button.addEventListener('click', saveToLocalStorage)
