@@ -81,8 +81,8 @@ function lookupWeather(location) {
             var tempValue = data["main"]["temp"];
             var windValue = data["wind"]["speed"];
             var humidityValue = data["main"]["humidity"];
-            // latitude = data ['coord']['lat'];
-            // longitude = data ['coord']['lon'];
+            var latitude = data ['coord']['lat'];
+            var longitude = data ['coord']['lon'];
 
             dateEL.innerHTML = moment().format("MMM Do YY");
             cityNameEl.innerHTML = nameValue;
@@ -91,14 +91,23 @@ function lookupWeather(location) {
             windEl.innerHTML = "Wind: " + windValue + "MPH";
             humidityEl.innerHTML = "Humidity: " + humidityValue + "%";
 
-            // var api = fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + ',&lon=' + longitude + APIKey)
+            var api = fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + APIKey)
 
-            //     .then(response => response.json())
-            //     .then(data => console.log (data))
-            //     .then(data => {
-            //         var uvIndexValue = data ['id'];
-            //         uvIndex.innerHTML=uvIndexValue;
-            //     })
+                .then(response => response.json())
+                // .then(data => console.log (data))
+                .then(data => {
+                    var uvIndexValue = data ['current']['uvi'];
+                    uvIndex.innerHTML=uvIndexValue;
+                    console.log(data);
+                    lowUVI.classList.add("lowUVI");
+                    newButton.lowUVI = data;  
+                    document.querySelector(".uvIndex").style.color =
+                    var uvIndex = document.querySelector(".uvIndex");
+                    document.createElement('style');
+                    document.getElementsByTagName("head")[0].appendChild(styleElement);
+
+
+                })
         });
 
     var datELtomorrow = document.querySelector(".dateDay0");
