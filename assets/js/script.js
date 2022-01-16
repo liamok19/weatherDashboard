@@ -99,14 +99,15 @@ function lookupWeather(location) {
                     var uvIndexValue = data ['current']['uvi'];
                     uvIndex.innerHTML=uvIndexValue;
                     console.log(data);
-                    if (uvIndexValue < 10 ) {
-                        uvIndex.style.backgroundColor = '#c9d3a6';
-                    } else if (uvIndexValue < 5) {
+                    if (uvIndexValue > 10 ) {
+                        uvIndex.style.backgroundColor = '#d86666';
+                    } else if (uvIndexValue > 6) {
                         uvIndex.style.backgroundColor = '#ffb600';
                     }
                     else {
-                        uvIndex.style.backgroundColor = '#d86666';
+                        uvIndex.style.backgroundColor = '#c9d3a6';
                     }
+
                 });
     });
     
