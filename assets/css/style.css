@@ -49,61 +49,80 @@
 }
 
 .day0_furtureforecast {
-    background: #2a2a50;
+    background: linear-gradient(321deg, #2a2a50, #235d8d, #2038463b);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
-    border: 10px;
+    border: solid #69a7f7 4px;
+    box-shadow: 4px 6px #2038463b;
 }
 
 .day1_furtureforecast {
-    background: #2a2a50;
+    background: linear-gradient(321deg, #2a2a50, #235d8d, #2038463b);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
-    border: 10px;
+    border: solid #69a7f7 4px;
+    box-shadow: 4px 6px #2038463b;
 
 }
 
 .day2_furtureforecast{
-    background: #2a2a50;
+    background: linear-gradient(321deg, #2a2a50, #235d8d, #2038463b);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
-    border: 10px;
+    border: solid #69a7f7 4px;
+    box-shadow: 4px 6px #2038463b;
 }
 .day3_furtureforecast {
-    background: #2a2a50;
+    background: linear-gradient(321deg, #2a2a50, #235d8d, #2038463b);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
-    border: 10px;
+    border: solid #69a7f7 4px;
+    box-shadow: 4px 6px #2038463b;
 }
 
 .day4_furtureforecast{
-    background: #2a2a50;
+    background: linear-gradient(321deg, #2a2a50, #235d8d, #2038463b);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: aliceblue;
     margin: 20px;
-    border: 10px;
+    border: solid #69a7f7 4px;
+    box-shadow: 4px 6px #2038463b;
+    /* -webkit-animation: day4_furtureforecast 1s ease-in-out infinite alternate;
+    -moz-animation: day4_furtureforecast 1s ease-in-out infinite alternate;
+    animation: day4_furtureforecast 1s ease-in-out infinite alternate; */
 }
 
 
 img {
-    width: 10vw;
+    width: 8vw;
     height: 13vh;
+
 }
+
+/* @-webkit-keyframes day4_furtureforecast {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  } */
 
 #futureheader{
     width: 15vw; 
 }
+
