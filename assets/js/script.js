@@ -72,7 +72,7 @@ function refreshCityList() {
 //fetching the data for the current and furture forecast. Calling the fucntion lookupWeather
 function lookupWeather(location) {
     fetch(
-        "http://api.openweathermap.org/data/2.5/weather?q=" + location + APIKey //applying APIkey variable as the end parameter as per documentation from openweathermap.com
+        "https://api.openweathermap.org/data/2.5/weather?q=" + location + APIKey //applying APIkey variable as the end parameter as per documentation from openweathermap.com
     )
         .then((response) => response.json())
         // .then(data => console.log (data))
@@ -125,11 +125,11 @@ function lookupWeather(location) {
     var datELday6 = document.querySelector(".dateDay4");
 
     //creating a global scope variable to attache to the start of the iconSrc
-    var iconURL = "http://openweathermap.org/img/wn/";
+    var iconURL = "https://openweathermap.org/img/wn/";
 
     // fetching the future forcast with API key
     fetch(
-        "http://api.openweathermap.org/data/2.5/forecast?q=" + location + APIKey
+        "https://api.openweathermap.org/data/2.5/forecast?q=" + location + APIKey
     )
         .then((response) => response.json())
         // .then(data => console.log (data))
