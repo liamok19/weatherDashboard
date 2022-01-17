@@ -153,6 +153,7 @@ function lookupWeather(location) {
                 var humidityValue = currentDay['main']['humidity'];
                 futurehumidity.innerHTML = "Humidity: " + humidityValue + "%"
 
+
             }
         })
         .catch((err) => {
