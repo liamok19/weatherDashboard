@@ -1,4 +1,14 @@
-# weatherDashboard
+# Weather Dashboard - Per City (Current and 5-Day Forecast)
+
+## Links
+Github Link:
+https://github.com/liamok19/weatherDashboard.git
+
+        Contact Information in the below link:
+
+Website Link:
+https://liamok19.github.io/weatherDashboard/
+
 
 ## User Story
 
@@ -25,6 +35,7 @@ THEN I am again presented with current and future conditions for that city
 - [Strategy](#strategy)
 - [Assets](#assets)
 - [Links](#links)
+- [Technologies Implemented](#Technologies)
 - [Credits](#credits)
 - [License](#license)
 
@@ -45,15 +56,14 @@ THEN I am again presented with current and future conditions for that city
 ## Assets
 ![weatherdashboardref](./assets/images/WeatherDashboard.gif)
 
-## Links
-```
-Github Link:
-https://github.com/liamok19/weatherDashboard.git
-```
-```
-Website Link:
-https://liamok19.github.io/weatherDashboard/
-```
+## Technologies:
+- HTML 
+- CSS
+- JavaScript 
+- Jquery
+- moment.js
+- Bootstrap 
+- Github
 
 ## Credits
 
